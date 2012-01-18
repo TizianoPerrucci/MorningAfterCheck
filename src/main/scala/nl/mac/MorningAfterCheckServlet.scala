@@ -1,3 +1,5 @@
+package nl.mac
+
 import java.io.File
 import org.scalatra._
 import scalate.ScalateSupport
@@ -15,19 +17,23 @@ class MorningAfterCheckServlet extends ScalatraServlet with ScalateSupport {
   get("/") {
     <html>
       <body>
-        <h1>Hello, world!</h1>
-        Say
-        <a href="reaction">hello to Scalate</a>
-        .
+        Check your
+        <a href="reaction">reaction</a>
       </body>
     </html>
   }
 
   get("/reaction/:h/:a/:q/:w") {
-    params
-    println(params("h").toInt)
-    templateEngine.layout("/WEB-INF/views/reaction.ssp",
-      Map("habits" -> params("h").toInt , "alcohol" -> params("a").toInt, "quantity" -> params("q").toInt, "weight" -> params("w").toInt))
+    println(params)
+    templateEngine.layout(
+      "/WEB-INF/views/reaction.ssp",
+      Map(
+        "habits" -> params("h").toInt,
+        "alcohol" -> params("a").toInt,
+        "quantity" -> params("q").toInt,
+        "weight" -> params("w").toInt
+      )
+    )
   }
 
   notFound {

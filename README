@@ -1,15 +1,11 @@
-1. Launch [SBT](http://code.google.com/p/simple-build-tool).
+Launch SBT:
+$ sbt
 
-        ./sbt
+Run Jetty:
+sbt> container:start
 
-2. Run Jetty
+The application is runnig on http://localhost:8080/
 
-        container:start
 
-3. Go to http://localhost:8080/.
-
-----
-
-Recompile
-
-        ~ compile
+Keep recompiling:
+sbt> ~ compile

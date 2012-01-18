@@ -3,7 +3,7 @@
 <%@ var quantity: Int = 0 %>
 <%@ var weight: Int = 0 %>
 
-<%@ var title: String = "Morning After Application" %>
+<%@ var title: String = "Morning After Check" %>
 
 <html>
 <head>
@@ -15,6 +15,6 @@
   Moderation: ${quantity} <br>
   Weight: ${weight} <br>
   <br>
-  Your reaction is: ${(habits /100 * 25) + (alcohol * 100 / 25) + (quantity / 100 * 25) + (weight / 100 * 15) * 4}
+  Your reaction is: ${(habits / 100 * 25) + (alcohol / 100 * 25) + (quantity / 100 * 25) + (weight / 100 * 25) * 4}
 </body>
 </html>
