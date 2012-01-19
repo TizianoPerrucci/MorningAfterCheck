@@ -1,20 +1,6 @@
-<%@ var habits: Int = 0 %>
-<%@ var alcohol: Int = 0 %>
-<%@ var quantity: Int = 0 %>
-<%@ var weight: Int = 0 %>
+<%@ var habits: Double = 0 %>
+<%@ var alcohol: Double = 0 %>
+<%@ var quantity: Double = 0 %>
+<%@ var weight: Double = 0 %>
 
-<%@ var title: String = "Morning After Check" %>
-
-<html>
-<head>
-  <title>${title}</title>
-</head>
-<body>
-  Habits: ${habits} <br>
-  Percentage: ${alcohol} <br>
-  Moderation: ${quantity} <br>
-  Weight: ${weight} <br>
-  <br>
-  Your reaction is: ${(habits / 100 * 25) + (alcohol / 100 * 25) + (quantity / 100 * 25) + (weight / 100 * 25) * 4}
-</body>
-</html>
+Your reaction is: ${((habits / 100 * 30) + (alcohol / 100 * 20) + (quantity / 100 * 30) + (weight / 100 * 20)) * 4}

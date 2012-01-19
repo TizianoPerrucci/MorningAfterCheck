@@ -28,10 +28,10 @@ class MorningAfterCheckServlet extends ScalatraServlet with ScalateSupport {
     templateEngine.layout(
       "/WEB-INF/views/reaction.ssp",
       Map(
-        "habits" -> params("h").toInt,
-        "alcohol" -> params("a").toInt,
-        "quantity" -> params("q").toInt,
-        "weight" -> params("w").toInt
+        "habits" -> params("h").toDouble,
+        "alcohol" -> params("a").toDouble,
+        "quantity" -> params("q").toDouble,
+        "weight" -> params("w").toDouble
       )
     )
   }
