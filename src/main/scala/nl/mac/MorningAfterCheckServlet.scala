@@ -3,8 +3,11 @@ package nl.mac
 import java.io.File
 import org.scalatra._
 import scalate.ScalateSupport
+import org.apache.log4j.Logger
 
 class MorningAfterCheckServlet extends ScalatraServlet with ScalateSupport {
+
+  private val log: Logger = Logger.getLogger(classOf[MorningAfterCheckServlet])
 
   before() {
     templateEngine.workingDirectory = new File("Working/templates")
@@ -24,7 +27,7 @@ class MorningAfterCheckServlet extends ScalatraServlet with ScalateSupport {
   }
 
   get("/reaction/:h/:a/:q/:w") {
-    println(params)
+    log.info("Parameters: " + params)
     templateEngine.layout(
       "/WEB-INF/views/reaction.ssp",
       Map(
