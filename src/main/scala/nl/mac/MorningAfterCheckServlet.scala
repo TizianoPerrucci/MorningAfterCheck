@@ -3,11 +3,10 @@ package nl.mac
 import java.io.File
 import org.scalatra._
 import scalate.ScalateSupport
-import org.apache.log4j.Logger
+import org.fusesource.scalate.util.Log
 
 class MorningAfterCheckServlet extends ScalatraServlet with ScalateSupport {
-
-  private val log: Logger = Logger.getLogger(classOf[MorningAfterCheckServlet])
+  val log = Log(getClass);
 
   before() {
     templateEngine.workingDirectory = new File("Working/templates")
