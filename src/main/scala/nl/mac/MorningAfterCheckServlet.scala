@@ -35,13 +35,18 @@ class MorningAfterCheckServlet extends ScalatraServlet with ScalateSupport {
       )
     )
   }
+  
+/*
+  post("/reaction") {
+
+  }
+*/
 
   notFound {
     // Try to render a ScalateTemplate if no route matched
     findTemplate(requestPath) map {
-      path =>
-        contentType = "text/html"
-        layoutTemplate(path)
+      path => layoutTemplate(path)
     } orElse serveStaticResource() getOrElse resourceNotFound()
   }
+
 }
