@@ -15,7 +15,7 @@ object JettyLauncher {
     val context = new ServletContextHandler(server, "/", ServletContextHandler.SESSIONS)
 
     //context.addFilter(classOf[MorningAfterCheckServlet], "/*", 0)
-    context.addServlet(classOf[MorningAfterCheckServlet], "/");
+    context.addServlet(classOf[MorningAfterCheckServlet], "/*");
     context.setResourceBase("src/main/webapp")
 
     server.start
