@@ -1,6 +1,6 @@
 <%@ var habits: Double = 0 %>
-<%@ var alcohol: Double = 0 %>
-<%@ var quantity: Double = 0 %>
 <%@ var weight: Double = 0 %>
+<%@ var percentage: Double = 0 %>
+<%@ var quantity: Double = 0 %>
 
-Your reaction is: ${((habits / 100 * 30) + (alcohol / 100 * 20) + (quantity / 100 * 30) + (weight / 100 * 20)) * 4}
+Your reaction is: ${((habits / 100 * 30) + (percentage / 100 * 20) + (quantity / 100 * 30) + (weight / 100 * 20)) * 4}

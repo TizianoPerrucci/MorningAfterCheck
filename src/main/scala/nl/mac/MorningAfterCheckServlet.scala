@@ -16,33 +16,14 @@ class MorningAfterCheckServlet extends ScalatraServlet with ScalateSupport {
     contentType = "text/html"
   }
 
-  get("/") {
-    <html>
-      <body>
-        Check your
-        <a href="reaction">reaction</a>
-      </body>
-    </html>
-  }
 
-  get("/reaction/:h/:a/:q/:w") {
-    log.info("Parameters: " + params)
-    templateEngine.layout(
-      "/WEB-INF/views/reaction.ssp",
-      Map(
-        "habits" -> params("h").toDouble,
-        "alcohol" -> params("a").toDouble,
-        "quantity" -> params("q").toDouble,
-        "weight" -> params("w").toDouble
-      )
-    )
-  }
-  
-/*
   post("/reaction") {
-
+    log.info("Parameters: " + params)
+    layoutTemplate("reaction",
+      ("habits", params("h").toDouble), ("weight", params("w").toDouble),
+      ("percentage", params("p").toDouble), ("quantity", params("q").toDouble))
   }
-*/
+
 
   notFound {
     // Try to render a ScalateTemplate if no route matched

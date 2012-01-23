@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Morning After Check</title>
+  </head>
+  <body>
+    <form method="POST" action="/reaction">
+        <u>Person</u>
+        <br>
+        Drinking habits:
+        <select name="h">
+            <option value="4">Easy</option>
+            <option value="3">Social</option>
+            <option value="2">Anonymous</option>
+            <option value="1">Easy</option>
+        </select>
+        <br>
+        Body weight:
+        <select name="w">
+            <option value="4">Slim</option>
+            <option value="3">Average</option>
+            <option value="2">Big Boned</option>
+            <option value="1">Heavy</option>
+        </select>
+        <br><br>
+        <u>Drink</u>
+        <br>
+        Alcohol percentage:
+        <select name="p">
+            <option value="1">Low Beer</option>
+            <option value="2">High Beer</option>
+            <option value="3">Wine</option>
+            <option value="4">Low Spirit</option>
+            <option value="5">High Spirit</option>
+        </select>
+        <br>
+        Quantity:
+        <select name="q">
+            <option value="1">Few</option>
+            <option value="2">Many</option>
+            <option value="3">Countless</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Check"/>
+   </form>
+  </body>
+</html>

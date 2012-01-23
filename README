@@ -1,11 +1,14 @@
+The Morning After Check is a sample application based on an abstraction of the drinking domain.
+
 Launch SBT:
 $ sbt
 
-Run Jetty:
+Run Jetty (application running on http://localhost:8080/):
 sbt> container:start
-
-The application is runnig on http://localhost:8080/
-
 
 Keep recompiling:
 sbt> ~ compile
+
+------------------------------------------------------------------------------------------------
+
+This application is configured to run on Heroku.
