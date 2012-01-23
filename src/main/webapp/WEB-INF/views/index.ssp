@@ -11,7 +11,7 @@
             <option value="4">Easy</option>
             <option value="3">Social</option>
             <option value="2">Anonymous</option>
-            <option value="1">Easy</option>
+            <option value="1">Heavy</option>
         </select>
         <br>
         Body weight:
@@ -33,11 +33,18 @@
             <option value="5">High Spirit</option>
         </select>
         <br>
-        Quantity:
-        <select name="q">
+        Moderation:
+        <select name="m">
             <option value="1">Few</option>
             <option value="2">Many</option>
             <option value="3">Countless</option>
+        </select>
+        <br>
+        Time:
+        <select name="t">
+            <option value="1">Evening</option>
+            <option value="2">Afternoon</option>
+            <option value="3">Morning</option>
         </select>
         <br><br>
         <input type="submit" value="Check"/>

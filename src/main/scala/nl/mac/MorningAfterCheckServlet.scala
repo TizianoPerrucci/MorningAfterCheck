@@ -21,7 +21,9 @@ class MorningAfterCheckServlet extends ScalatraServlet with ScalateSupport {
     log.info("Parameters: " + params)
     layoutTemplate("reaction",
       ("habits", params("h").toDouble), ("weight", params("w").toDouble),
-      ("percentage", params("p").toDouble), ("quantity", params("q").toDouble))
+      ("percentage", params("p").toDouble), ("moderation", params("m").toDouble),
+      ("time", params.getOrElse("t", "0").toDouble)
+    )
   }
 
 
